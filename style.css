@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.wrapper{
+    max-width: 500px;
+    margin: auto;
+    border: solid 2px;
+    border-color: black;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.content_login_register{
+    font-size: 20px;
+    line-height: 80%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.content_login_register h1 span{
+    color:  #46a358;
+}
+p{
+    font-size: 13px;
+    line-height: 123%;
+    margin-bottom: 14px;
+    text-align: center; 
+}
+.form_username input{
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 16px;
+    border-color: rgb(117, 115, 115);
+}
+.form_email input{
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    padding-left: 10px;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 16px;
+    border-color: rgb(117, 115, 115);
+}
+.form_password input{
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    padding-left: 10px;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 16px;
+    border-color: rgb(117, 115, 115);
+}
+.form_cofirm_password input{
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    width: 300px;
+    padding-left: 10px;
+    height: 40px;
+    margin-bottom: 41px;
+    border-color: rgb(117, 115, 115);
+}
+.btn button{
+    border-radius: 5px;
+    width: 300px;
+    height: 45px;
+    background: #46a358;
+    margin-bottom: 36px;
+    color:white;
+    font-size: 16px;
+    border-color: #46a358;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content_text_link p{
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 27px;
+}
+.content_text_link_google{
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+.content_text_link_google a {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    color: #727272;
+    text-align: center;
+    margin-bottom: 13px;
+    margin-top: 10px;
+    margin-left: 68px;
+    text-decoration: none;
+}
+.content_text_link_google a img{
+    margin-top: 10px;
+    margin-right:9px;
+}
+.content_text_link_fecebook{
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 40px;
+}
+.content_text_link_fecebook a{
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    color: #727272;
+    text-align: center;
+    margin-bottom: 13px;
+    margin-top: 10px;
+    margin-left: 68px;
+    margin-right: 68px;
+    text-decoration: none;
+}
+.content_text_link_fecebook img{
+    margin-right: 4px;
+    margin-top: 10px;
+}
