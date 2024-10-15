@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'cera_prolight';
+    src: url('../fonts/cerapro-light-webfont.eot');
+    src: url('../fonts/cerapro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cerapro-light-webfont.woff2') format('woff2'),
+         url('../fonts/cerapro-light-webfont.woff') format('woff'),
+         url('../fonts/cerapro-light-webfont.ttf') format('truetype'),
+         url('../fonts/cerapro-light-webfont.svg#cera_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -30,7 +43,7 @@ header .logo{
     margin-bottom: 17px;
 }
 header nav a{
-    font-family: "Cera Pro", sans-serif;
+    font-family: "Cera pro", sans-serif ;
     font-weight: 400;
     font-size: 16px;
     color: #3d3d3d;
@@ -125,6 +138,7 @@ h1 span{
 }
 
 .link_shop_now {
+    font-family: "Cera pro" sans-serif;
     border-radius: 6px;
     background: #46a358;
     padding-left: 26px;
@@ -235,6 +249,7 @@ h1 span{
     font-size: 18px;
     line-height: 89%;
     color: #46a358;
+    font-family: "Cera Pro",sans-serif;
 }
 
 
@@ -298,6 +313,10 @@ h1 span{
     height: 12px;
     background-image: url(../images/items_next.svg);
 }
+.numbered_list ul li:last-of-type:hover .next::before{
+    background-image: url(../images/items_next_white.svg);
+}
+
 .numbered_list ul li a:hover{
     background: #46a358;
     color: #fff;
