@@ -224,10 +224,93 @@ h1 span{
     margin-bottom: 90px;
 }
 .main_product_items article{
-    max-width: 250px;
+    max-width: 258px;
     width: 100%;
     margin-bottom: 70px;
+    border-top: solid 1px transparent;
+    position: relative;
 }
+.main_product_items article ul{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    margin-bottom: 7px;
+    top: 72%;
+    transform:translate(50%, 50%);
+
+}
+.main_product_items article ul li{
+    background-color:#ffffff;
+    padding: 7px 7px 7px 7px;
+    border-radius: 4px;
+
+}
+
+.main_product_items article ul li:first-of-type a:before{
+    content:"";
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/shopping\ 1.svg);
+}
+
+.main_product_items article ul li:first-of-type a:hover::before{
+    background-image: url(../images/shopping\ 1\ copy.svg);
+}
+
+.main_product_items article ul li:nth-of-type(2) a:before{
+    content:"";
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/heart\ 1.svg)
+}
+
+.main_product_items article ul li:nth-of-type(2) a:hover:before{
+    background-image: url(../images/heart\ 1\ copy.svg);
+
+}
+.main_product_items article ul li:last-of-type a:before{
+    content:"";
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/Frame.svg);
+}
+.main_product_items article ul li:last-of-type a:hover::before{
+    background-image: url(../images/Frame\ copy.svg);
+}
+
+.main_product_items article .sale{
+    position: absolute;
+    background-color: #46a358;
+    color: #ffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    padding-top: 7px;
+    padding-right: 8px;
+    padding-bottom: 6px;
+    padding-left: 9px;
+    left: 0;
+    top: 10px;
+
+}
+
+
+
+.main_product_items article:hover{
+    border-top: solid 1px #46a358;
+}
+
+.main_product_items article img{
+    width: 100%;
+    align-items: center;
+    display: inline-flex;
+    z-index: 2;
+}
+
+
 .card_foto_links{
     background: #fbfbfb;
     max-height: 300px;
@@ -235,6 +318,8 @@ h1 span{
     margin-bottom: 12px;
     min-height: 230px;
     padding-top: 25px;
+    display: inline-flex;
+    max-width: 258px;
 }
 
 .product_name_text{
@@ -251,7 +336,16 @@ h1 span{
     color: #46a358;
     font-family: "Cera Pro",sans-serif;
 }
+.product_price_text span{
+    text-decoration: line-through;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 89%;
+    color: #a5a5a5;;
+    font-family: "Cera Pro",sans-serif;
+    margin-left: 16px;
 
+}
 
 
 
@@ -352,6 +446,19 @@ h1 span{
     background: #fbfbfb;
 }
 
+.content_post article img{
+    position: relative;
+    bottom: 62px;
+    right: 15px;
+    width: 100%;
+}
+.content_post article .images_trends{
+    position: relative;
+    bottom: 53px;
+    width: 100%;
+}
+
+
 .content_post_text h4{
     font-weight: 900;
     font-size: 18px;
@@ -434,6 +541,7 @@ h1 span{
 }
 .content_blog_post article img{
     margin-bottom: 8px;
+    width: 100%;
 }
 .content_blog_post_text{
     padding-left: 15px;
