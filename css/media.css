@@ -1,4 +1,4 @@
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 440px) { /*Iphon13promax-14promax*/
     .container{
         padding: 0 10px;
         max-width: 440px;
@@ -48,7 +48,7 @@
 
     .numbered_list{
         position: relative;
-        transform: translateX(-17%);
+        transform: translateX(-5%);
     }
 
     .content_post{
@@ -183,18 +183,18 @@
         text-align: center;
         position: relative;
         bottom: 40px;
-        right: -15px;
+        right: -45px;
     }
     .basement_content  .content_join_with_email input{
         position: relative;
-        right: -40px;
+        right: -50px;
         z-index: 1;
         margin-bottom: 20px;
         padding-bottom: 15px;
     }
     .basement_content .content_join_with_email button{
         position: absolute;
-        right: 5%;
+        right: 2%;
         padding-bottom: 15px;
         border-radius: 0 6px 6px 0;
 
@@ -211,7 +211,7 @@
         text-align: center;
         margin-bottom: 20px;
         position: relative;
-        left: 7px;
+        left: 30px;
     }
 
     .basement_content_floor_below ul{
