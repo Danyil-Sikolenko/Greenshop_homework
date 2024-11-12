@@ -166,6 +166,7 @@ header{
     max-width: 1200px;
     margin: auto;
 }
+
 header .container{
     display: flex;
     justify-content: space-between;
