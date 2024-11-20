@@ -97,6 +97,7 @@ header {
         }
 
         .dropdown {
+            z-index: 2;
             li {
                 &:first-of-type {
                     position: relative;
@@ -354,6 +355,24 @@ header {
             @include max-screen(440px){
                 display: none;
             }
+        }
+    }
+}
+
+
+
+.owl-dots{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .owl-dot{
+        span{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #1a712a;
+            margin: 10px;
+            display: inline-block;
         }
     }
 }
