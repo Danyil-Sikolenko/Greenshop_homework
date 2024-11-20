@@ -1,0 +1,10 @@
+@keyframes pulse {
+  0% {
+    opacity: 100;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 100;
+    border-radius: 20px;
+  }
+}/*# sourceMappingURL=anima-btn.css.map */
