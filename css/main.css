@@ -203,6 +203,43 @@ header .login::before {
   }
 }
 
+.nav-but-wrap {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-but-wrap {
+    display: block;
+    position: relative;
+    left: 5px;
+    bottom: 25px;
+  }
+  header .login {
+    display: none;
+  }
+  header .container {
+    background-color: rgba(23, 22, 22, 0.418);
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+  header {
+    padding: 0%;
+  }
+  .logo {
+    z-index: 1000;
+  }
+  .nav-active {
+    display: block;
+  }
+}
+header nav {
+  position: relative;
+}
+
+.ui-icon::before {
+  display: none;
+}
+
 /* POSTER____________________________________________________________________________________________________________________*/
 .holder {
   margin-bottom: 26px;
@@ -211,6 +248,7 @@ header .login::before {
   display: flex;
   background: linear-gradient(135deg, rgba(245, 245, 245, 0.5) 0%, rgba(245, 245, 245, 0.5) 100%);
   font-family: "Cera Pro", sans-serif;
+  position: relative;
 }
 .holder .main_block .main_block_content {
   margin-left: 43px;
@@ -311,6 +349,48 @@ header .login::before {
   background-color: #1a712a;
   margin: 10px;
   display: inline-block;
+}
+
+.owl-nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 70px;
+  position: absolute;
+  top: 35%;
+  color: #000000;
+  width: 100%;
+}
+
+.owl-prev span {
+  background: rgba(253, 248, 248, 0.9490196078);
+  border: solid 1px #000000;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+  padding-left: 15px;
+  border-radius: 30px;
+  position: relative;
+  left: -25px;
+}
+.owl-prev span:hover {
+  background: #52c368;
+  transition: 0.1s;
+}
+
+.owl-next span {
+  background: rgba(253, 248, 248, 0.9490196078);
+  border: solid 1px #000000;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 20px;
+  border-radius: 30px;
+  position: relative;
+  right: -25px;
+}
+.owl-next span:hover {
+  background: #52c368;
+  transition: 0.1s;
 }
 
 /*Main__________________________Product-sale_________________________________________________________________________________________*/
@@ -822,6 +902,69 @@ header .login::before {
     text-align: center;
     padding-bottom: 5px;
   }
+}
+
+.ui-accordion .ui-accordion-header.ui-state-active {
+  background-color: transparent;
+  padding: 20px 10px;
+  border-radius: 16px 16px 0 0;
+  border: solid 1px black;
+  border-bottom: none;
+}
+.ui-accordion .ui-accordion-header.ui-state-active:last-of-type {
+  margin-bottom: 0;
+}
+
+.ui-accordion .ui-accordion-header {
+  background-color: transparent;
+  padding: 20px 10px;
+  border-radius: 16px 16px 16px 16px;
+  border: solid 1px black;
+}
+.ui-accordion .ui-accordion-header:last-of-type {
+  margin-bottom: 20px;
+}
+
+.ui-accordion .ui-accordion-content {
+  border-radius: 0 0 16px 16px;
+  border: solid 1px black;
+  border-top: none;
+}
+
+.ui-accordion-content-active:last-of-type {
+  margin-bottom: 20px;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  color: #000000;
+}
+
+.ui-icon {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  background-image: none;
+  background-position: inherit;
+  text-indent: 0%;
+  margin-top: 0%;
+  width: 32px;
+  height: 32px;
+}
+.ui-icon::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("https://www.limitlessx.com/cdn/shop/t/68/assets/chevron-down.svg");
+}
+
+.ui-accordion .ui-accordion-header.ui-state-active .ui-icon {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+.ui-accordion .ui-accordion-header.ui-state-hover .ui-icon {
+  background-image: none;
 }
 
 /*Basement-content_____________________________________________________________________________________________________________________*/
