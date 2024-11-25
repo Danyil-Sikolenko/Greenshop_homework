@@ -203,41 +203,96 @@ header .login::before {
   }
 }
 
-.nav-but-wrap {
+/* Гамбургер иконка */
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  z-index: 15;
+  left: 50%;
+  top: 30px;
+  position: fixed;
+  display: none;
+}
+@media screen and (max-width: 440px) {
+  .menu-btn {
+    display: block;
+    left: 50%;
+  }
+}
+
+.menu-btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222222;
+  transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
-  .nav-but-wrap {
-    display: block;
-    position: relative;
-    left: 5px;
-    bottom: 25px;
-  }
-  header .login {
-    display: none;
-  }
-  header .container {
-    background-color: rgba(23, 22, 22, 0.418);
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-  }
-  header {
-    padding: 0%;
-  }
-  .logo {
-    z-index: 1000;
-  }
-  .nav-active {
-    display: block;
-  }
-}
-header nav {
-  position: relative;
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
 }
 
-.ui-icon::before {
-  display: none;
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+/* Меню, которое будет появляться */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: #51cb69;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.menu.active {
+  transform: translateX(0);
+  z-index: 10;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu_list ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.menu_list ul li {
+  margin-bottom: 10px;
+}
+.menu_list ul li a {
+  font-size: 50px;
+  color: #000000;
+  border-bottom: solid 1px #000000;
 }
 
 /* POSTER____________________________________________________________________________________________________________________*/
@@ -376,6 +431,16 @@ header nav {
   background: #52c368;
   transition: 0.1s;
 }
+@media screen and (max-width: 440px) {
+  .owl-prev span {
+    position: relative;
+    left: -9px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+}
 
 .owl-next span {
   background: rgba(253, 248, 248, 0.9490196078);
@@ -391,6 +456,16 @@ header nav {
 .owl-next span:hover {
   background: #52c368;
   transition: 0.1s;
+}
+@media screen and (max-width: 440px) {
+  .owl-next span {
+    position: relative;
+    right: -7px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 15px;
+  }
 }
 
 /*Main__________________________Product-sale_________________________________________________________________________________________*/

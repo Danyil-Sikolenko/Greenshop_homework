@@ -263,59 +263,111 @@ header {
 }
 
 
+  
+    
 
 
-//ПЕРЕОПРЕДЕЛЕНИЕ СТИЛЕЙ ДЛЯ БУРГЕР МЕНЮ___________________________________________________________________________________________________//
-.nav-but-wrap{
+//___________Гамбургер меню__________________________________________________________________________________________//
+
+/* Гамбургер иконка */
+.menu-btn {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	z-index:2;
+	overflow: hidden;
+    z-index: 15;
+    left: 50%;
+    top: 30px;
+    position: fixed;
     display: none;
-}
-@media screen and (max-width:600px){
-    .nav-but-wrap{
-        display: block;
-        position: relative;
-        left: 5px;
-        bottom: 25px;
+    
+    @include max-screen(440px){
+     display: block;
+     left: 50%;
     }
-    header .login {
-       display: none;
-    }
-    header .container {
-        background-color: rgba(23, 22, 22, 0.418);
-        width: 100%;
-        border-radius: 0 0 10px 10px;
-    }
-    header{
-        padding: 0%;
-    }
-    .logo{
-        z-index: 1000;
-    }
-    .nav-active{
-        display: block;
-    }
-
 }
 
 
+.menu-btn{ 
+     span {
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #222222;
+	transition: all 0.5s;
+  }
+}
 
-header nav{
-    position: relative;
-    // left: -102px;
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);  
+}
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg); 
+}
+
+/* Меню, которое будет появляться */
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+  background: #51cb69;
+	transform: translateX(-100%);
+	transition: transform 0.5s; 
+}
+
+.menu.active {
+	transform: translateX(0);
+    z-index: 10;
+}
+
+.menu{ 
+   li {
+	list-style-type: none;
+}
+}
+.menu_list{
+    ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    li{
+        margin-bottom: 10px;
+        a{
+            font-size: 50px;
+            color: #000000;
+            border-bottom: solid 1px #000000 ;
+        }
+    }
+    }
 }
 
 
 
-.ui-icon::before{
-    display: none;
-}
-//________________________________________________________________________________________________________________________________//
 
 
-
-
-
-
-
+//____________________________________________________________________________________________________________________________//
 
 
 /* POSTER____________________________________________________________________________________________________________________*/
@@ -468,6 +520,14 @@ span{     //Так_как_стрелка_написана_текстом_она_
         background: #52c368;
         transition: .1s;
     }
+    @include max-screen(440px){
+        position: relative;
+        left: -9px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        padding-right: 15px;
+        padding-left: 10px;
+    }
 }
 }
 
@@ -485,6 +545,14 @@ span{     //Так_как_стрелка_написана_текстом_она_
         &:hover{
             background: #52c368;
             transition: .1s;
+        }
+        @include max-screen(440px){
+            position: relative;
+            right: -7px;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            padding-left: 15px;
         }
     }
 }
